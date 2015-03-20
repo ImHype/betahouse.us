@@ -1,0 +1,649 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: "微软雅黑";
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+/*
+    © Aloe
+*/
+@media (max-width: 767px) {
+    #navbox{display:none;}
+    .outer,#emailbox{
+        width:600px;
+        margin:10px auto;
+    }
+    #tab1{display:none;}
+    .item .intro{
+        top:0px;
+        left:115px;
+        font-size:smaller;
+        padding-right:7px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #navbox{display:none;}
+    .outer,#emailbox{
+        width:730px;
+        margin:10px auto;
+    }
+    #tab1{display:none;}
+    .item .intro{
+        top:30px;
+        left:140px;
+        padding-right:10px;
+        font-size:smaller;
+    }
+
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .outer,#emailbox{
+        width:850px;
+        margin:30px auto;
+    }
+    #tab2{display:none;}
+    .item .intro{
+        top:30px;
+        left:160px;
+        padding-right:10px;
+    }
+    #tab-left{height:100%;display:none;}
+}
+@media (min-width: 1200px) {
+    .outer,#emailbox{
+        width:900px;
+        margin:30px auto;
+    }
+    #tab2{display:none;}
+    .item .intro{
+        top:40px;
+        left:180px;
+        padding-right:10px;
+    }
+    #tab-left{display:block;height:100%;}
+}
+
+body{
+    background:#E8E8E8;
+}
+#headerbox{
+    height:200px;
+}
+#logo>img{
+    height:150px;
+    margin-top:20px;
+}
+
+#choicebox{
+    margin:50px auto;
+}
+#navimgbox{
+    margin:0 auto;
+    width:235px;
+}
+#choicebox img{
+    width:50px;
+    height:50px;
+    margin:0 12px;
+}
+#navtext{
+    color:#E6793A;
+    font-size:22px;
+}
+#navtext span{
+    border-bottom:1px solid #E6793A;
+}
+/* card */
+.box{
+    background:#fff;
+}
+
+.outer,#emailbox{
+    -moz-box-shadow:0px 0px 10px 5px rgba(117, 117, 117, 0.2);
+    -webkit-box-shadow:0px 0px 10px 5px rgba(117, 117, 117, 0.2);
+    box-shadow:0px 0px 10px 5px rgba(117, 117, 117, 0.2);
+    height:300px;
+}
+
+.item{
+    position:absolute;
+    display:inline;
+    left:0px;
+    height:100%;
+    width:100%;
+}
+.item .imgbox{
+}
+.item .imgbox>img{
+}
+.item .intro{
+    position:absolute;
+    color:#565656;
+    margin-right:5px;
+}
+/*email login*/
+
+.hr{
+    width:98%;
+    height:10px;
+    margin:8px 0;
+    background:#E6793A;
+}
+#emailbox{
+    padding:5px;
+    background:#fff;
+    display:none;
+}
+#emailbox form{
+    width:500px;
+    height:180px;
+    margin:40px auto;
+}
+#emailbox .email-item{
+    width:500px;
+    height:40px;
+    margin:12px auto;
+    background:#E8E8E8;
+}
+#emailbox input{
+    border:0px;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    padding:0 20px;
+    color:#212121;
+}
+
+#emailbox .email-item1 input{
+    background:#E8E8E8;
+    width:300px;
+    height:40px;
+}
+#emailbox .email-item1 span{
+    color:#E6793A;
+}
+#emailbox .email-item2{}
+#emailbox .email-item3{
+    width:280px;
+    background:#E6793A;
+    color:#fff;
+    margin-left:110px;
+}
+#emailbox .email-item3:hover {
+    background:#E8E8E8;
+}
+
+
+/* nav */
+#navbox
+{
+    height:200px;
+}
+#navbox .one{
+    position:absolute;
+    margin-top:0;
+    display:inline-block;
+    margin-right:15px;
+    transform-origin:0 top 0;
+    -webkit-transform: 0 top 0；
+-webkit-transition:all 0.5s ease-in-out 0s;
+    -o-transition:all 0.5s ease-in-out 0s;
+    -moz-transition:all 0.5s ease 0;
+    transition:all 0.5s ease-in-out 0s;
+}
+#one0 {margin-left:0;}
+#one1 {margin-left:40px;}
+#one2 {margin-left:100px;}
+#one3 {margin-left:140px;}
+#one4 {margin-left:180px;}
+#s0 {height:80px;}
+#s1 {height:100px;}
+#s2 {height:60px;}
+#s3 {height:110px;}
+#s4 {height:70px;}
+
+#navbox .straight {
+    width:0px;
+    height:80px;
+    border:2px solid #fff;
+    margin-left:16px;
+}
+#navbox .circle{
+    width:18px;
+    height:18px;
+    border-radius: 50%;
+    border:5px solid #fff;
+    margin-left:9px;
+    /* box-shadow:0px 0px 1px 2px #EAEAEA; */
+}
+
+
+#navbox .thing {
+    display:none;
+    width:35px;
+    border:#fff solid 5px;
+    margin-top:10px;
+    text-align:center;
+    padding: 5px;
+    color:#fff;
+    font-size:16px;
+    word-break: break-all;
+}
+
+#navbox .thing:hover {
+    border:#E6793A solid 5px;
+    border-radius:2px;
+    color:#E6793A;
+}
+#thing0{display:none;}
+#thing1{display:none;}
+#thing2{display:none;}
+#thing3{display:none;}
+#thing4{display:none;}
+
+/* tab1 */
+
+#tab1{
+    height:350px;
+    padding:40px 0;
+}
+#tab1 .item{
+    width:130px;
+    height:40px;
+    background:#fff;
+    position: relative;
+    margin:20px auto;
+    border:0;
+    border-radius: .2em;
+    box-shadow: 0 0 5px 3px #f2f2f2;
+    transition: border 0.3s ease;
+    -moz-transition: border 0.3s ease;  /* Firefox 4 */
+    -webkit-transition: border 0.3s ease;   /* Safari 和 Chrome */
+    -o-transition: border 0.3s ease;    /* Opera */
+    padding:8px 30px;
+    cursor:pointer;
+    display: block;
+}
+#tab1 .item:hover{
+    border-left:8px #FF5722 solid;
+}
+#tab1 .active1{
+    border-left:8px #FF5722 solid;
+}
+#tab1 .item span{
+    color:#212121;
+}
+
+/* tab2 */
+#tab2{
+    height:50px;
+    width:600px;
+    margin:0 auto;
+    padding-left: 15px;
+    margin-top:30px;
+}
+#tab2 .item{
+    position: relative;
+    width:130px;
+    background: #fff;
+    padding:8px 35px;
+    margin:0 10px;
+    border:0;
+    border-radius: .2em;
+    box-shadow: 0 0 5px 3px #f2f2f2;
+    transition: border 0.3s ease;
+    -moz-transition: border 0.3s ease;  /* Firefox 4 */
+    -webkit-transition: border 0.3s ease;   /* Safari 和 Chrome */
+    -o-transition: border 0.3s ease;    /* Opera */
+    cursor:pointer;
+}
+#tab2 .item:hover{
+    border-bottom:8px #FF5722 solid;
+}
+#tab2 .active2{
+    border-bottom:8px #FF5722 solid;
+}
+#tab1 .item span{
+    color:#212121;
+}
+
+/* Adver..  */
+.pop{
+    z-index:999;
+    width:100%;
+    height:1000px;
+    position:absolute;
+    display: none;
+    background: url(../img/advertise.png)  no-repeat top center;
+    background-size:80%;
+}
+.pop img {
+    width:100%;
+}
+.blur {
+    z-index: 5;
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: rgba(254,223,183,0.7);
+    display: none;
+}
+#exam {
+    background: url(../img/exam.png) no-repeat  80%;
+    position: absolute;
+    height:50px;
+    width:200px;
+    margin: 38% 0 0 70%;
+}
+#exam:hover {
+    background: url(../img/examAfter.png) no-repeat 80%;
+    margin:37% 0 0 70%;
+}
+
+
+
+/* demo */
+
+/*#tab2{background:#888; }*/
+/*#tab1{background:#888; }*/
+
+
+
+
+
+
